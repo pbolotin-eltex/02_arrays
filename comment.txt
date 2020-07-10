@@ -1,0 +1,33 @@
+This repo need for eltex school task presentation.
+
+Task number 2 here. Topic: arrays in C.
+
+~ 1. Need to output square matrix by given N:
+
+     Example N = 3:
+     1 2 3
+     4 5 6
+     7 8 9
+    
+~ 2. Need to output array that was reversed:
+     
+     Input  -> 1 2 3 4 5
+     Output -> 5 4 3 2 1
+    
+~ 3. Fill the upper triangle of matrix by ones.
+     Fill the lower triangle of matrix by zeroes.
+     
+     Example:
+     0 0 1
+     0 1 1
+     1 1 1
+    
+~ 4. Fill the matrix by number from 1 to N^2 like spiral:
+
+     Example:
+     1  2  3  4  5
+     16 17 18 19 6
+     15 24 25 20 7
+     14 23 22 21 8
+     13 12 11 10 9
+
