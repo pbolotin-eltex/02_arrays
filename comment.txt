@@ -1,4 +1,4 @@
-This repo need for eltex school task presentation.
+This repo is needed for eltex school task presentation.
 
 Task number 2 here. Topic: arrays in C.
 
@@ -14,8 +14,8 @@ Task number 2 here. Topic: arrays in C.
      Input  -> 1 2 3 4 5
      Output -> 5 4 3 2 1
     
-~ 3. Fill the upper triangle of matrix by ones.
-     Fill the lower triangle of matrix by zeroes.
+~ 3. Fill the lower triangle of matrix by ones.
+     Fill the upper triangle of matrix by zeroes.
      
      Example:
      0 0 1
