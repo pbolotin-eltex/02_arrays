@@ -12,7 +12,7 @@ Task number 2.4 here. Topic: arrays in C.
 ********************************************************/
 #include <stdio.h>
 
-#define N_4 9
+#define N_4 3
 
 int func_part_04() {
     int matrix[N_4][N_4];
@@ -57,11 +57,15 @@ int func_part_04() {
         step_inside++;
     }
     if(quad_side_2x == 0) {
-        y -= 2;
-        x += 2;
-        new_x = (x + quad_side_2x/2)/2 + step_inside;
-        new_y = (-y + quad_side_2x/2)/2 + step_inside;
-        matrix[new_y][new_x] = counter;
+        if(counter != 1) {
+            y -= 2;
+            x += 2;
+            new_x = (x + quad_side_2x/2)/2 + step_inside;
+            new_y = (-y + quad_side_2x/2)/2 + step_inside;
+            matrix[new_y][new_x] = counter;
+        } else {//case when matrix has size 1x1
+            matrix[0][0] = 1;
+        }
     }
     // Print result
     for(int i = 0; i < N_4*N_4; i++) {
