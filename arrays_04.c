@@ -12,7 +12,7 @@ Task number 2.4 here. Topic: arrays in C.
 ********************************************************/
 #include <stdio.h>
 
-#define N_4 3
+#define N_4 8
 
 int func_part_04() {
     int matrix[N_4][N_4];
@@ -74,7 +74,54 @@ int func_part_04() {
     return 0;
 }
 
+int matrix[N_4][N_4];
+
+int another_way() {
+    int side = N_4;
+    int i = 0;
+    int counter = 1;
+    int row_y = 0;
+    int col_x = 0;
+    while(side >= 0) {
+        //Right
+        for(i = 0; i < side - 1; i++) {
+            matrix[row_y][col_x] = counter++;
+            col_x++;
+        }
+        //Down
+        for(i = 0; i < side - 1; i++) {
+            matrix[row_y][col_x] = counter++;
+            row_y++;
+        }
+        //Left
+        for(i = 0; i < side - 1; i++) {
+            matrix[row_y][col_x] = counter++;            
+            col_x--;
+        }
+        //Up
+        for(i = 0; i < side - 1; i++) {
+            matrix[row_y][col_x] = counter++;
+            row_y--;
+        }
+        row_y++;
+        col_x++;
+        side -= 2;
+    }
+    if(side == -1) {
+        row_y--;
+        col_x--;
+        matrix[row_y][col_x] = counter;
+    }
+    // Print result
+    for(i = 0; i < N_4*N_4; i++) {
+        printf("%2d%c", matrix[i/N_4][i%N_4], (i+1)%N_4?' ':'\n');
+    }
+    return 0;
+}
+
 int main() {
     func_part_04();
+    printf("\n");
+    another_way();
     return 0;
 }
