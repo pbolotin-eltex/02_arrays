@@ -12,7 +12,7 @@ Task number 2.4 here. Topic: arrays in C.
 ********************************************************/
 #include <stdio.h>
 
-#define N_4 8
+#define N_4 5
 
 int func_part_04() {
     int matrix[N_4][N_4];
@@ -74,9 +74,8 @@ int func_part_04() {
     return 0;
 }
 
-int matrix[N_4][N_4];
-
 int another_way() {
+    int matrix[N_4][N_4];
     int side = N_4;
     int i = 0;
     int counter = 1;
